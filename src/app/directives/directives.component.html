@@ -1,0 +1,14 @@
+<div class="main">
+
+  <h2>Task-3 Directives</h2>
+
+  <button (click)="toggle()" class="btn">Display Details</button>
+
+  <p *ngIf="showSecret" class="display-content">{{content}}</p>
+
+  <p *ngFor="let log of Log; index as i" [ngStyle]="{backgroundColor: getColor(i)}"
+     [ngClass]="{'text': i >= items}">
+    {{log}}
+  </p>
+
+</div>
